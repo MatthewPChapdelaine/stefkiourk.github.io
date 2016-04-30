@@ -5,8 +5,8 @@
     <description>Stefki&#39;s metaverse</description>
     <link>https://stefkiourk.github.io/</link>
     <atom:link href="https://stefkiourk.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Apr 2016 09:19:26 +0000</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2016 09:19:26 +0000</lastBuildDate>
+    <pubDate>Sat, 30 Apr 2016 09:28:32 +0000</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 09:28:32 +0000</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
@@ -17,7 +17,7 @@
   &lt;li&gt;Experiment&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal &lt;a href=&quot;https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif&quot;&gt;my critical WP data&lt;/a&gt;. Moving to Jekyll also increased my writing productivity by seconds.&lt;/p&gt;
+&lt;p&gt;WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal &lt;a href=&quot;https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif&quot;&gt;my wp_posts data&lt;/a&gt;. Moving to Jekyll also increased my writing productivity by seconds.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Apr 2016 08:42:00 +0000</pubDate>
         <link>https://stefkiourk.github.io/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</link>
