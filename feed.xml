@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stef Ki&#39;s metaverse</title>
+    <description>Stefki&#39;s metaverse</description>
+    <link>https://stefkiourk.github.io/</link>
+    <atom:link href="https://stefkiourk.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 30 Apr 2016 08:24:58 +0000</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 08:24:58 +0000</lastBuildDate>
+    <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Obligatory post regarding migration to Jekyll</title>
+        <description>&lt;p&gt;I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are &lt;del&gt;hipsterous&lt;/del&gt; numerous:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Experiment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal &lt;a href=&quot;https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif&quot;&gt;my critical WP data&lt;/a&gt;. Moving to Jekyll also increased my writing productivity by seconds.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Apr 2016 08:42:00 +0000</pubDate>
+        <link>https://stefkiourk.github.io/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</link>
+        <guid isPermaLink="true">https://stefkiourk.github.io/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</guid>
+        
+        <category>jekylls</category>
+        
+        <category>wordpress</category>
+        
+        <category>migration</category>
+        
+        
+        <category>misc</category>
+        
+      </item>
+    
+      <item>
+        <title>Unity tips: Animating GUI based incremented number values</title>
+        <description>&lt;p&gt;Let’s say you have some type of event that increases your score, which is displayed on the GUI, but instead of simply changing the value, you want to “animate” towards the value by visually allowing the user to see all the values between. I spent an hour coding a working example, which is pretty quick n’ dirty. Open the example link above.&lt;/p&gt;
+
+&lt;p&gt;Download link(embed .unity3d): &lt;a href=&quot;https://github.com/stefkiourk/unitips-animated-counter-example/archive/master.zip&quot;&gt;AnimatedGUICounterExample&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/unity-animated-counter.jpg&quot; alt=&quot;AnimatedGUICounterExample&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;You have a limited amount of time&lt;/li&gt;
+  &lt;li&gt;Collecting mushrooms adds 1.6 seconds of available time and increases score (which we want to animate) by 500&lt;/li&gt;
+  &lt;li&gt;Game finishes either by collecting all the mushrooms (reaching 4500 score) or running out of time&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Mushroom has a “MushController” script attached which implements the OnTriggerEnter Method, allowing us to “listen” for collisions (make sure you have a rigidbody component attached to your GameObject). Checking if our object collided with the FPSController prefab (or anything related) we call IncrementScore and destroy the object. (I removed the code that’s not related to the purpose). In addition to increasing the score, we are also increasing a “buffer”, which is checked on an Update to see if it’s above zero.&lt;/p&gt;
+
+&lt;p&gt;If it is, it starts “DecreaseScoreBuffer” via a coroutine. “DecreaseScoreBuffer” is IEnumerator type, allowing as to yield the steps. Arguably one could achieve the same result with Update(), having the buffer decreasing (and updating the GUI label) at ~60 times per second (default), but this gives us more flexibility, being able to yield for longer periods, etc (Or at least that’s what I know, given my current knowledge and time spent on the matter).&lt;/p&gt;
+
+&lt;h2 id=&quot;ontriggerenter&quot;&gt;&lt;strong&gt;OnTriggerEnter()&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;OnTriggerEnter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Collider&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;collider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;collider&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;DemoPlayer&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;GameLogic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;IncrementScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;500&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;gamelogicincrementscore&quot;&gt;&lt;strong&gt;GameLogic.IncrementScore()&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;( tweaks public static properties related to the game)&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;IncrementScore&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;howMuch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;howMuch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;howMuch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;On an Update method, have the “scoreToAdd” property checked. If it’s above 0 (buffer not empty), start the coroutine.&lt;/p&gt;
+
+&lt;h2 id=&quot;mainupdate&quot;&gt;&lt;strong&gt;Main.Update()&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GameLogic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nf&quot;&gt;StartCoroutine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GameLogic&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;DecreaseScoreBuffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;gamelogicdecreasescorebuffer&quot;&gt;&lt;strong&gt;GameLogic.DecreaseScoreBuffer()&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;IEnumerator&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;DecreaseScoreBuffer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;//onRoutine is a bool property that works as a brake, since Update() would either way call DecreaseScoreBuffer ~60 times per second.
+&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onRoutine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;onRoutine&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;/=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;--;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;scoreLabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;GetComponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;UILabel&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;&amp;gt;().&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Convert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;ToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;score&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scoreToAdd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Accessing scoreLabel&#39;s (GameObject) UILabel component (NGUI).
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;WaitForSeconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0.3f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// wait for ~1/3 of a second before increasing the score in the label
+&lt;/span&gt;    &lt;span class=&quot;n&quot;&gt;onRoutine&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//setting onRoutine back to true after waiting for n seconds
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Made with Unity,  NGUI and iTween. Feedback is most welcome.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 22 Oct 2014 08:42:00 +0000</pubDate>
+        <link>https://stefkiourk.github.io/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</link>
+        <guid isPermaLink="true">https://stefkiourk.github.io/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</guid>
+        
+        <category>game-dev</category>
+        
+        <category>unity</category>
+        
+        <category>tips</category>
+        
+        
+        <category>game-dev</category>
+        
+      </item>
+    
+  </channel>
+</rss>
