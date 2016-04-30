@@ -3,10 +3,10 @@
   <channel>
     <title>Stef Ki&#39;s metaverse</title>
     <description>Stefki&#39;s metaverse</description>
-    <link>https://stefkiourk.github.io/</link>
-    <atom:link href="https://stefkiourk.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Apr 2016 10:00:59 +0000</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2016 10:00:59 +0000</lastBuildDate>
+    <link>http://stefki.com/</link>
+    <atom:link href="http://stefki.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 30 Apr 2016 10:02:32 +0000</pubDate>
+    <lastBuildDate>Sat, 30 Apr 2016 10:02:32 +0000</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
@@ -20,8 +20,8 @@
 &lt;p&gt;WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal &lt;a href=&quot;https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif&quot;&gt;my wp_posts data&lt;/a&gt;. Moving to Jekyll also increased my writing productivity by seconds.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Apr 2016 08:42:00 +0000</pubDate>
-        <link>https://stefkiourk.github.io/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</link>
-        <guid isPermaLink="true">https://stefkiourk.github.io/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</guid>
+        <link>http://stefki.com/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</link>
+        <guid isPermaLink="true">http://stefki.com/2016/04/29/unity-tips-animating-gui-based-incremented-number-values</guid>
         
         <category>jekylls</category>
         
@@ -113,8 +113,8 @@
 &lt;p&gt;Made with Unity,  NGUI and iTween. Feedback is most welcome.&lt;/p&gt;
 </description>
         <pubDate>Wed, 22 Oct 2014 08:42:00 +0000</pubDate>
-        <link>https://stefkiourk.github.io/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</link>
-        <guid isPermaLink="true">https://stefkiourk.github.io/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</guid>
+        <link>http://stefki.com/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</link>
+        <guid isPermaLink="true">http://stefki.com/2013/08/06/unity-tips-animating-gui-based-incremented-number-values</guid>
         
         <category>game-dev</category>
         
