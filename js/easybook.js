@@ -1,12 +1,4 @@
-/*!
- * EasyBook Jekyll Theme Javascript
- * 
- * http://laobubu.github.io/jekyll-theme-EasyBook
- * https://github.com/laobubu/jekyll-theme-EasyBook
- *
- * This is just a extension for my theme.
- */
-
+//based on EasyBook Jekyll Theme Javascript, https://github.com/laobubu/jekyll-theme-EasyBook this is an extension for his theme
 function TOCize(toc, content, matchHeightTo) {
     if (!(toc && content && matchHeightTo)) return false
     
