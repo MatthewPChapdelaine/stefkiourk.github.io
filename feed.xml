@@ -5,9 +5,46 @@
     <description>Stefki&#39;s metaverse</description>
     <link>https://stefki.com/</link>
     <atom:link href="https://stefki.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 30 Oct 2016 15:51:51 +0000</pubDate>
-    <lastBuildDate>Sun, 30 Oct 2016 15:51:51 +0000</lastBuildDate>
+    <pubDate>Thu, 29 Dec 2016 22:11:23 +0000</pubDate>
+    <lastBuildDate>Thu, 29 Dec 2016 22:11:23 +0000</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>&amp;quot;This site is best viewed in Internet Explorer&amp;quot; and other UI mistakes</title>
+        <description>&lt;p&gt;Aaargh! I’m over-analyzing things but the devil is always in the details. A blast from the past, when proper web standards weren’t around and Netscape Navigator was still a thing. Fast forward into 2016, contemporary browsers do support major web standards in an acceptable form. Remnants of this web browser company-wise dick fighting are extinct, some are still around though:&lt;br /&gt;
+&lt;!--more--&gt;&lt;br /&gt;
+&lt;a href=&quot;https://partners.microsoft.com/partnerprogram/BrowserWarning.aspx&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/this_site_is_best_viewed_by_a_time_machine.png&quot; alt=&quot;Image of &amp;quot;this site is best viewed by IE&amp;quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;On to some analysis. Using the &lt;a href=&quot;https://archive.org/&quot; target=&quot;_blank&quot;&gt;WaybackMachine&lt;/a&gt; service specifically for the URL in question, we get the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;i&gt;“Saved 19 times between February 22, 2008 and May 15, 2016.”&lt;/i&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Checking the captures, previous version of the website can be seen at 1st of April in 2013. Next capture happens on 28th of June 2015 and after that it remains the same, which means that between 2013-2015 someone thought it was still a good idea to keep the browser warning. Currently the footer shows a normal copyright symbol accompanied with “2014”.&lt;/p&gt;
+
+&lt;p&gt;To add to this, the “Sign out” is not rendered because the server returns a logged in user. It’s hardcoded text and the link points to login.live.com, which redirects you to account.microsoft.com.&lt;/p&gt;
+
+&lt;p&gt;When it comes to links, the title links to the partner portal (no interaction on mouse-over) and the Microsoft brand image isn’t linked to anything. The linked arrow sticks next to the text, to compliment the bad design. Factually, Internet Explorer is actually discontinued and replaced by Edge, we are in 2016 and this webpage practically renders the same in all the modern browsers.&lt;/p&gt;
+
+&lt;p&gt;Final thoughts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neglect truly influences the user experience and it&#39;s definitely a sin when it comes to UX design. Update promptly.&lt;/li&gt;
+&lt;li&gt;Link the brand image.&lt;/li&gt;
+&lt;li&gt;Develop with modern web standards in mind.&lt;/li&gt;
+&lt;li&gt;Be creative when it comes to designing warning / error messages, &lt;a href=&quot;http://www.creativebloq.com/web-design/best-404-pages-812505&quot; target=&quot;_blank&quot;&gt;like 404 pages&lt;/a&gt;, avoid using the default ones.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 29 Dec 2016 10:00:00 +0000</pubDate>
+        <link>https://stefki.com/2016/12/29/this-site-is-best-viewed-in-Internet-Explorer</link>
+        <guid isPermaLink="true">https://stefki.com/2016/12/29/this-site-is-best-viewed-in-Internet-Explorer</guid>
+        
+        <category>UI</category>
+        
+        <category>UX</category>
+        
+        
+        <category>99problems</category>
+        
+      </item>
     
       <item>
         <title>Terminus (short story)</title>
@@ -15,13 +52,13 @@
 
 &lt;p&gt;I was one of the last remaining humans, traveling on board one of the escape shuttles, evacuating earth. The year was centuries from ~now, and I was a tall, middle-aged man.&lt;/p&gt;
 
-&lt;p&gt;Our universe was about to be destroyed by a force unknown to me, but mentioned in stories whispered by people in the shuttle. A woman approached me and asked if my wish was to die while being awake, offering me the option of drug induced sleep. Fear kicked in, when the motionless space shuttle started making loud mechanical noises. I ran towards a large window nearby and saw earth getting smaller and smaller, as we were flying away.&lt;/p&gt;
+&lt;p&gt;The universe was about to be destroyed by a force unknown to me, but mentioned in stories whispered by people in the shuttle. A woman approached me and asked if my wish was to die while being awake, offering me the option of drug-induced sleep. Fear kicked in, when the motionless space shuttle started making loud mechanical noises. I ran towards a large window nearby and saw earth getting smaller and smaller, as we were flying away.&lt;/p&gt;
 
-&lt;p&gt;The middle-aged man’s identity, now completely transcended and extended to me, finally kicked in. I was feeling his desperation, his hopelessness, and his tears. Embracing the “death” of everything, I sat by the window and stared at the stars. I can’t remember which came first, the violent vibrations and the bright light, or the intense screams coming from people behind me. As I looked back, the space shuttle and the people in it were annihilated.&lt;/p&gt;
+&lt;p&gt;The middle-aged man’s identity, now completely transcended and applied to me, finally kicked in. I was feeling his desperation, his hopelessness and his tears. Embracing the end, I sat by the window and stared at the stars. I can’t remember which came first, the violent vibrations and the bright light, or the intense screams coming from the people behind me. As I looked back, the space shuttle and everyone else was annihilated.&lt;/p&gt;
 
-&lt;p&gt;And I breathed, tried to complete a breath, for the last time, as I was about to become “nothing”, as words were about to lose their meaning.&lt;/p&gt;
+&lt;p&gt;And I breathed for the last time, as I was about to become one with nothing, as words were about to lose their meaning.&lt;/p&gt;
 
-&lt;p&gt;The moment passed, and I was no more.&lt;/p&gt;
+&lt;p&gt;The moment passed and I was no more.&lt;/p&gt;
 
 &lt;p&gt;–––&lt;br /&gt;
 &lt;i&gt;That was actually a lucid dream I “had” 3 years ago. Most of my dreams are lucid, but that felt…foreign.&lt;/i&gt;&lt;/p&gt;
