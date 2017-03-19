@@ -5,13 +5,13 @@
     <description>Stefki&#39;s metaverse</description>
     <link>https://stefki.com/</link>
     <atom:link href="https://stefki.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Mar 2017 16:27:52 +0000</pubDate>
-    <lastBuildDate>Sun, 19 Mar 2017 16:27:52 +0000</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2017 16:33:01 +0000</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2017 16:33:01 +0000</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
-        <title>Using Node to parse and serve multiple web comics in one page</title>
-        <description>&lt;p&gt;I’m a lazy (aka automation-loving) bastard. Why browse multiple web comics instead of just having all the latest strips served in one uncluttered page. And why not experiment with Node instead of Python / Scrapy. &lt;em&gt;Grabs coffee&lt;/em&gt;.&lt;br /&gt;
+        <title>Using Node.js to parse and serve multiple web comics in one page</title>
+        <description>&lt;p&gt;I’m a lazy (aka automation-loving) bastard. Why browse multiple web comics instead of just having all the latest strips served in one uncluttered page. And why not experiment with Node.js instead of Python / Scrapy. &lt;em&gt;Grabs coffee&lt;/em&gt;.&lt;br /&gt;
 &lt;!--more--&gt;&lt;br /&gt;
 &lt;a href=&quot;/images/node-comics.gif&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/node-comics.gif&quot; alt=&quot;Loading comics from multiple sources&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
