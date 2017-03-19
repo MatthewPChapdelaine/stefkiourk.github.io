@@ -5,9 +5,43 @@
     <description>Stefki&#39;s metaverse</description>
     <link>https://stefki.com/</link>
     <atom:link href="https://stefki.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 15 Jan 2017 11:28:33 +0000</pubDate>
-    <lastBuildDate>Sun, 15 Jan 2017 11:28:33 +0000</lastBuildDate>
+    <pubDate>Sun, 19 Mar 2017 16:27:52 +0000</pubDate>
+    <lastBuildDate>Sun, 19 Mar 2017 16:27:52 +0000</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Using Node to parse and serve multiple web comics in one page</title>
+        <description>&lt;p&gt;I’m a lazy (aka automation-loving) bastard. Why browse multiple web comics instead of just having all the latest strips served in one uncluttered page. And why not experiment with Node instead of Python / Scrapy. &lt;em&gt;Grabs coffee&lt;/em&gt;.&lt;br /&gt;
+&lt;!--more--&gt;&lt;br /&gt;
+&lt;a href=&quot;/images/node-comics.gif&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/node-comics.gif&quot; alt=&quot;Loading comics from multiple sources&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Project is &lt;a href=&quot;https://github.com/stefkiourk/comicdose&quot; target=&quot;_blank&quot;&gt;hosted in Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Needless to say that this should remain within personal use and not under an Internet-facing deployment, as it would violate creators’ rights. Parsing is highly dependent on the respective web comic’s webpage structure, so nothing bulletproof there. Much space for refactoring as well, but hey, if it works…&lt;/p&gt;
+
+&lt;p&gt;Also, kudos to Randall Munroe for his amazing books &lt;a href=&quot;https://store.xkcd.com/products/xkcd-volume-0&quot; target=&quot;_blank&quot;&gt;“xkcd vol 0”&lt;/a&gt; and &lt;a href=&quot;https://store.xkcd.com/pages/if-you-re-looking-for-the-what-if-book&quot; target=&quot;_blank&quot;&gt;“what if”&lt;/a&gt;. Some of the best reads I had for a while. Glad to have them in my collection and I highly recommend them for everyone.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://store.xkcd.com&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/images/xkcd-books.jpg&quot; alt=&quot;xkcd books&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 19 Mar 2017 15:00:00 +0000</pubDate>
+        <link>https://stefki.com/2017/03/19/one-webcomic-to-node-them-all</link>
+        <guid isPermaLink="true">https://stefki.com/2017/03/19/one-webcomic-to-node-them-all</guid>
+        
+        <category>web</category>
+        
+        <category>comics</category>
+        
+        <category>nodejs</category>
+        
+        <category>express</category>
+        
+        
+        <category>nodejs</category>
+        
+        <category>productivity</category>
+        
+      </item>
     
       <item>
         <title>Black Mirror&#39;s San Junipero: Heaven is a place on earth</title>

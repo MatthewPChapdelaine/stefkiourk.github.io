@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Obligatory post regarding migration to Jekyll « Stef Ki's metaverse</title>
+  <title>Using Node to parse and serve multiple web comics in one page « Stef Ki's metaverse</title>
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are hipsterous numerous:">
+  <meta name="description" content="I’m a lazy (aka automation-loving) bastard. Why browse multiple web comics instead of just having all the latest strips served in one uncluttered page. And w...">
   
   <!--<link rel="stylesheet" href="/css/main.css">-->
   <style>
@@ -45,29 +45,36 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Obligatory post regarding migration to Jekyll</h1>
-    <p class="post-meta">Apr 29, 2016</p>
+    <h1 class="post-title">Using Node to parse and serve multiple web comics in one page</h1>
+    <p class="post-meta">Mar 19, 2017</p>
   </header>
   
   <article class="post-content">
-    <p>I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are <del>hipsterous</del> numerous:</p>
+    <p>I’m a lazy (aka automation-loving) bastard. Why browse multiple web comics instead of just having all the latest strips served in one uncluttered page. And why not experiment with Node instead of Python / Scrapy. <em>Grabs coffee</em>.<br />
+<!--more--><br />
+<a href="/images/node-comics.gif" target="_blank"><img src="/images/node-comics.gif" alt="Loading comics from multiple sources" /></a></p>
 
-<ul>
-  <li>Experiment</li>
-</ul>
+<p>Project is <a href="https://github.com/stefkiourk/comicdose" target="_blank">hosted in Github</a></p>
 
-<p>WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal <a href="https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif">my wp_posts data</a>. Moving to Jekyll also increased my writing productivity by seconds.</p>
+<p>Needless to say that this should remain within personal use and not under an Internet-facing deployment, as it would violate creators’ rights. Parsing is highly dependent on the respective web comic’s webpage structure, so nothing bulletproof there. Much space for refactoring as well, but hey, if it works…</p>
+
+<p>Also, kudos to Randall Munroe for his amazing books <a href="https://store.xkcd.com/products/xkcd-volume-0" target="_blank">“xkcd vol 0”</a> and <a href="https://store.xkcd.com/pages/if-you-re-looking-for-the-what-if-book" target="_blank">“what if”</a>. Some of the best reads I had for a while. Glad to have them in my collection and I highly recommend them for everyone.</p>
+
+<p><a href="https://store.xkcd.com" target="_blank"><img src="/images/xkcd-books.jpg" alt="xkcd books" /></a></p>
+
 
   </article>
   <div class="post-tags">
   Tags: 
   
   
-  <a href="/tags/#jekyll">jekyll</a>,
+  <a href="/tags/#web">web</a>,
   
-  <a href="/tags/#wordpress">wordpress</a>,
+  <a href="/tags/#comics">comics</a>,
   
-  <a href="/tags/#migration">migration</a>
+  <a href="/tags/#nodejs">nodejs</a>,
+  
+  <a href="/tags/#express">express</a>
   
 </div>
   
