@@ -2,26 +2,26 @@
 <html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema">
   <head>
 
-  <title>Obligatory post regarding migration to Jekyll « Stef Ki's metaverse</title>
+  <title>How to build your own web comic back-end (and how I started one) « Stef Ki's metaverse</title>
   
   <meta property="fb:app_id" content=397032724009848 />
-  <meta property="og:title" content="Obligatory post regarding migration to Jekyll" />
-  <meta property="og:description" content="I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are hipsterous numerous:" />
+  <meta property="og:title" content="How to build your own web comic back-end (and how I started one)" />
+  <meta property="og:description" content="I’ve been planning on doing a web comic for a couple of years now, keeping notes and ideas for strips and mentally designing the web app. I started by doing ..." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://stefki.com/2016/04/29/obligatory-post-regarding-migration-to-jekyll" />
+  <meta property="og:url" content="https://stefki.com/2017/04/08/how-to-build-your-own-web-comic-back-end" />
   <meta property="og:image" content="https://stefki.com/images/42_large.png" />
   
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are hipsterous numerous:">
+  <meta name="description" content="I’ve been planning on doing a web comic for a couple of years now, keeping notes and ideas for strips and mentally designing the web app. I started by doing ...">
   
   <!--<link rel="stylesheet" href="/css/main.css">-->
   <style>
   @charset "UTF-8";.post .post-content,.tag-cloud{text-align:justify}img{display:block;margin-left:auto;margin-right:auto}.post .post-header .post-title{font-size:36px!important}.tag-cloud{list-style:none;padding:0;font-size:16px}.tag-cloud li{display:inline-block;margin:0 12px 12px 0}.no-js #loader{display:none}.js #loader{display:block;position:absolute;left:100px;top:0}.se-pre-con{position:fixed;left:0;top:0;width:100%;height:100%;z-index:9999;background:url(/images/Preloader_2.gif) center no-repeat #fff}#archives{padding:5px}.archive-group{margin:5px;border-top:1px solid #ddd}.archive-item{margin-left:5px}.post-tags{text-align:right}body{margin:0;font-family:"Open Sans","Helvetica Neue","DejaVu Sans",Arial,"PingFang SC","Noto Sans CJK SC","Hiragino Sans GB","å¾®è½¯é›…é»‘",Helvetica,sans-serif;font-size:16px;line-height:1.5}a{text-decoration:none;color:#036}a:focus,a:hover{text-decoration:underline;color:#069}blockquote{background:#FFF;margin:0;padding:5px 20px;border-left:10px solid #CCC}code,pre{font-family:Menlo,Monaco,Consolas,"DejaVu Sans Mono","Liberation Mono","æ–‡æ³‰é©¿ç­‰å®½å¾®ç±³é»‘","Courier New",Courier,SimSun,monospace;font-size:15px}code{color:#900;background-color:#fff;padding:2px 5px;border-radius:5px}pre{overflow-x:auto;padding:20px 50px}pre,pre code{color:#fafafa;background-color:#223}pre code{padding:0}.hide{display:none}.center{text-align:center}table{border-collapse:collapse;border-spacing:0;margin:10pt auto;background:#FFF}table td,table th{border:1px solid #CCC;padding:5px 15px;margin:0}table th{border-color:#555;background:#555;color:#eee;font-weight:400}table tr:hover{background:rgba(255,255,0,.2)}h1,h2,h3,h4,h5,h6{font-weight:400}.wrapper{margin:0 auto;max-width:1100px}.col-box p,.header{margin:0}@media (max-width:1120px){.wrapper{max-width:800px}}.header{line-height:32px;background-color:#1B2339;padding:10px}.header:after{clear:both;content:' ';display:block}.header .site-title{float:left;color:#FFF;text-decoration:none;font-size:16px;line-height:32px}.header .site-nav{text-align:right}.col-box-author,.footer,.home .pagination{text-align:center}.header .site-nav a{text-decoration:none;color:#CFD8DC;padding:10px 20px;white-space:nowrap}.header .site-nav a:focus,.header .site-nav a:hover{background:#78909C}.page-content{background:#e0e0e3;padding:30px 0}.page-content .wrapper{position:relative;background:#FAFAFA;box-shadow:0 1px 4px #999;outline:#CCC solid 1px}.page-content .wrapper:after{clear:both;content:'';display:block}.page-content .wrapper:before{content:'';display:block;position:absolute;width:300px;height:100%;left:800px;top:0;background:#EEE}.col-main,.col-second{position:relative;box-sizing:border-box;float:left}.page-content img{max-width:100%}.col-main{padding:30px;width:800px}.col-second{width:300px;padding:20px;background:#EEE;z-index:10}.col-box{color:#666;font-size:14px;padding-bottom:20px}.col-box ul{padding-left:20px;margin:0}.col-box:not(:first-child){border-top:1px solid #ccc;padding-top:20px}.col-box .col-box-title{color:#333;margin-bottom:10px;font-size:15.4px}@media (max-width:1120px){.page-content .wrapper:before{display:none}.col-main,.col-second{width:auto;float:none}.col-box{width:50%;float:left;margin-bottom:10px}.col-box:not(:first-child){border-top:none;padding-top:0}.col-second:after{clear:both;display:block;content:' '}}.col-box-author .avatar{width:135px;height:135px;border-radius:100%;margin:20px auto;display:block}.col-box-author .name{font-size:16px}.col-box-author .contact{margin-top:10px}.col-box-author .contact a{background:#999;color:#eee;padding:5px 10px;text-decoration:none;border-radius:5px;white-space:nowrap}.col-box-author .contact a:hover{transition:background .3s ease;background:#666}.footer{padding:60px 0;background-color:#e0e0e3;color:#666;font-size:14px}.post .post-header{margin:0 100px 40px;padding:20px}.post .post-header .post-title{font-weight:400;margin:0 -100px}@media screen and (max-width:600px){.post .post-header .post-title{font-size:34px}}.post .post-header .post-meta{color:#999;font-size:14px;margin:0 -100px}@media screen and (max-width:600px){.post .post-header{text-align:center;margin-bottom:10px;padding:10px}}.post .post-content{color:#333}.post .post-content h1,.post .post-content h2,.post .post-content h3,.post .post-content h4,.post .post-content h5,.post .post-content h6{color:#000}.post .post-content h1,.post .post-content h2{margin-bottom:10px;margin-top:30px}.post .post-content h1,.post .post-content h2,.post .post-content h3{border-bottom:1px solid #CCC}.post .post-content pre{margin:0 -30px}@media screen and (max-width:600px){.post .post-content pre{margin:0 -10px}}.post .post-content .middle-image{display:block;margin-left:auto;margin-right:auto}.post .post-comments{padding-top:30px}.home .page-heading{font-size:40px;font-weight:400;margin:20px}@media screen and (max-width:600px){.home .page-heading{margin:10px;font-size:34px}}.home .rss-link{float:right;text-decoration:none;border:1px solid;color:#999;background:#fff;font-size:11.2px;padding:1px 8px}.home .rss-link:focus,.home .rss-link:hover{color:#666}.home .post-list{margin:0;padding:20px 40px;list-style:none}.home .post-list>li{padding-bottom:30px;border-bottom:1px solid #CCC;margin-bottom:30px}.home .post-list .post-title{font-size:28px;font-weight:400;margin:0}.home .post-list .post-meta{font-size:14px;color:#666;margin:0 20px .5em}.home .post-list .post-excerpt{margin:0 20px}.home .post-list .post-excerpt,.home .post-list .post-excerpt *{font-size:14px;line-height:14px;padding-top:0;padding-bottom:0;color:#333}.home .post-list .post-excerpt code,.home .post-list .post-excerpt pre,.home .post-list .post-excerpt pre *{color:#666;background-color:#eee}.home .post-list .post-excerpt th{border-color:#ccc;background-color:#ccc}.home .post-list .post-excerpt a{color:#069}.home .post-list .post-excerpt img{display:block;margin:1em auto;max-height:16em;opacity:.7;transition:opacity .3s}.home .post-list .post-excerpt img:hover{opacity:1}@media screen and (max-width:600px){.home .post-list{padding:10px}}.home .pagination{text-decoration:none;color:#666;margin:30px 0}.home .pagination .page_number{margin:0 30px}.home .pagination .next,.home .pagination .previous{padding:10px 20px;white-space:nowrap}.home .pagination a.next,.home .pagination a.previous{color:#333;border-radius:20px;border:1px solid #CCC}.home .pagination a.next:hover,.home .pagination a.previous:hover{background:#fefefe;color:#000;text-decoration:none}@media screen and (max-width:800px){.page-content{padding:0}.footer{padding:15px 0}}@media screen and (max-width:600px){.col-box,.header .site-title{float:none}.col-main,pre{padding:10px}.header,.header .site-nav{text-align:center}.col-box{width:100%;margin-bottom:20px}}.highlight .hll{background-color:#49483e}.highlight .c{color:#75715e}.highlight .err{color:#960050;background-color:#1e0010}.highlight .k{color:#66d9ef}.highlight .l{color:#ae81ff}.highlight .n{color:#f8f8f2}.highlight .o{color:#f92672}.highlight .p{color:#f8f8f2}.highlight .c1,.highlight .cm,.highlight .cp,.highlight .cs{color:#75715e}.highlight .ge{font-style:italic}.highlight .gs{font-weight:700}.highlight .kc,.highlight .kd{color:#66d9ef}.highlight .kn{color:#f92672}.highlight .kp,.highlight .kr,.highlight .kt{color:#66d9ef}.highlight .ld{color:#e6db74}.highlight .m{color:#ae81ff}.highlight .s{color:#e6db74}.highlight .na{color:#a6e22e}.highlight .nb{color:#f8f8f2}.highlight .nc{color:#a6e22e}.highlight .no{color:#66d9ef}.highlight .nd{color:#a6e22e}.highlight .ni{color:#f8f8f2}.highlight .ne,.highlight .nf{color:#a6e22e}.highlight .nl,.highlight .nn{color:#f8f8f2}.highlight .nx{color:#a6e22e}.highlight .py{color:#f8f8f2}.highlight .nt{color:#f92672}.highlight .nv{color:#f8f8f2}.highlight .ow{color:#f92672}.highlight .w{color:#f8f8f2}.highlight .mf,.highlight .mh,.highlight .mi,.highlight .mo{color:#ae81ff}.highlight .s2,.highlight .sb,.highlight .sc,.highlight .sd{color:#e6db74}.highlight .se{color:#ae81ff}.highlight .s1,.highlight .sh,.highlight .si,.highlight .sr,.highlight .ss,.highlight .sx{color:#e6db74}.highlight .bp,.highlight .vc,.highlight .vg,.highlight .vi{color:#f8f8f2}.highlight .il{color:#ae81ff}.highlight .gu{color:#75715e}.highlight .gd{color:#f92672}.highlight .gi{color:#a6e22e}.page-content .wrapper .post-toc>ul{overflow:auto}.util-notify1{position:absolute;z-index:100;background:rgba(0,0,0,.7);color:#FFF;padding:5px 10px;font-size:14px;pointer-events:none;opacity:1;transition:.2s ease}.util-notify1.hidden{opacity:0;display:none}
   </style>
 
-  <link rel="canonical" href="https://stefki.com/2016/04/29/obligatory-post-regarding-migration-to-jekyll">
+  <link rel="canonical" href="https://stefki.com/2017/04/08/how-to-build-your-own-web-comic-back-end">
   <link rel="alternate" type="application/rss+xml" title="Stef Ki's metaverse" href="https://stefki.com/feed.xml"/>
   <script>
 var host = "stefki.com";
@@ -54,29 +54,121 @@ if ((host == window.location.host) && (window.location.protocol != "https:"))
           <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Obligatory post regarding migration to Jekyll</h1>
-    <p class="post-meta">Apr 29, 2016</p>
+    <h1 class="post-title">How to build your own web comic back-end (and how I started one)</h1>
+    <p class="post-meta">Apr 8, 2017</p>
   </header>
   
   <article class="post-content">
-    <p>I’m one of these people that moved from WordPress to Jekyll and I feel obliged to publish a post about it. The reasons I did this are <del>hipsterous</del> numerous:</p>
+    <p>I’ve been planning on doing a web comic for a couple of years now, keeping notes and ideas for strips and mentally designing the web app. I started by doing research and trying to find out-of-the-box solutions in order to save time, only to realize that WordPress + plugins seemed to be the only feasible solution (and maybe that I was using the wrong search keywords).</p>
 
-<ul>
-  <li>Experiment</li>
-</ul>
+<p>But since a CMS to handle simple tasks is as inefficient as using a katana to kill ants, I decided to go with Node.js. <br />
+<!--more--><br />
+Cutting to the chase and avoiding the nitty-gritty aspects, assuming you know your way around coding, I used Express to handle the routing:</p>
 
-<p>WordPress was becoming an issue, maintaining a full-featured dynamic CMS was cumbersome. I had to wake up during the middle of the night to make sure that hackers, terrorists and the government wouldn’t hack into the server and steal <a href="https://45.media.tumblr.com/3e08aa96b40ee75993914b1dc3735240/tumblr_msgbflqtcX1sd4vr7o1_500.gif">my wp_posts data</a>. Moving to Jekyll also increased my writing productivity by seconds.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">comics</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'./comics.json'</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">"/:id(\\d+)"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+  <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">id</span> <span class="o">&gt;</span> <span class="nx">comics</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'404'</span><span class="p">,</span> <span class="p">{</span> <span class="na">status</span><span class="p">:</span> <span class="mi">404</span><span class="p">,</span> <span class="na">url</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">url</span> <span class="p">});</span>
+  <span class="k">else</span>
+    <span class="p">[..]</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'index'</span><span class="p">,</span> <span class="p">{</span><span class="na">comic</span><span class="p">:</span> <span class="nx">comics</span><span class="p">[</span><span class="nx">id</span> <span class="o">-</span> <span class="mi">1</span><span class="p">],</span> <span class="na">previous</span><span class="p">:</span> <span class="nx">previous</span><span class="p">,</span> <span class="na">next</span><span class="p">:</span> <span class="nx">next</span><span class="p">});</span>
+    <span class="p">[..]</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>(//d+) ensures that the specific route is applied only to numbers. View engine of choice is <a href="https://www.npmjs.com/package/pug" target="_blank">Jade/Pug</a>. Rendering a 404 page in case of a wrong ID:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">res</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="s1">'404'</span><span class="p">,</span> <span class="p">{</span> <span class="na">status</span><span class="p">:</span> <span class="mi">404</span><span class="p">,</span> <span class="na">url</span><span class="p">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">url</span> <span class="p">});</span>
+</code></pre>
+</div>
+
+<p>In any other case, “index” is rendered and a comic object is sent. I used the same template I have on my blog, which uses <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> to serve static content. Comics are simply stored in a JSON file - comics.json - in the following format:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">"num"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+      <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Ice Destroyer"</span><span class="p">,</span>
+      <span class="s2">"imagename"</span><span class="p">:</span> <span class="s2">"icebreaker.jpg"</span><span class="p">,</span>
+      <span class="s2">"desc"</span> <span class="p">:</span> <span class="s2">"With your brains and my beauty, our children will be exceptional"</span><span class="p">,</span>
+      <span class="s2">"alt"</span> <span class="p">:</span> <span class="s2">"Ironically enough, there was a sperm bank that was allegedly accepting donations only from Nobel Prize laureates"</span><span class="p">,</span>
+      <span class="s2">"date"</span><span class="p">:</span> <span class="s2">"Apr 07, 2017"</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="s2">"num"</span><span class="p">:</span> <span class="s2">"2"</span><span class="p">,</span>
+      <span class="s2">"title"</span><span class="p">:</span> <span class="s2">"Title 2"</span><span class="p">,</span>
+      <span class="s2">"imagename"</span><span class="p">:</span> <span class="s2">"johndoe.jpg"</span><span class="p">,</span>
+      <span class="s2">"desc"</span> <span class="p">:</span> <span class="s2">"A description"</span><span class="p">,</span>
+      <span class="s2">"alt"</span> <span class="p">:</span> <span class="s2">"An alternative description"</span><span class="p">,</span>
+      <span class="s2">"date"</span><span class="p">:</span> <span class="s2">"Apr 07, 2042"</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+</code></pre>
+</div>
+
+<p>Then index.pug replaces all the necessary parts with the comic content. Facebook meta properties are filled:</p>
+<pre>
+property="og:title" content="#{comic.title}"
+property="og:description" content="#{comic.desc}"
+property="og:type" content="website"
+property="og:url" content="https://comic.stefki.com/#{comic.num}"
+property="og:image" content="https://stefki.com/comic/strips/#{comic.imagename}"
+</pre>
+
+<p>And then the parsed comic object data are used with the necessary HTML tags:</p>
+<pre>
+#{comic.title}
+#{comic.date}
+etc.
+</pre>
+
+<p>All I need to do to add a new comic is to add a new image in the images folder:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s2">"/images"</span><span class="p">,</span> <span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">__dirname</span> <span class="o">+</span> <span class="s1">'/public/views/images'</span><span class="p">));</span>
+</code></pre>
+</div>
+
+<p>and add the details to the comics.json file.</p>
+
+<p>Some back-end related extras; Robots.txt is served within Node:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/robots.txt'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">type</span><span class="p">(</span><span class="s1">'text/plain'</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s2">"User-agent: *\nAllow: *"</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>And since browsers are in love with favicons and in order to avoid multiple requests, I used <a href="https://www.npmjs.com/package/serve-favicons" target="_blank">serve-favicon</a> to serve it via Node:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="p">[..]</span>
+<span class="kd">var</span> <span class="nx">favicon</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'serve-favicon'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path'</span><span class="p">);</span>
+<span class="p">[..]</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">favicon</span><span class="p">(</span><span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'public'</span><span class="p">,</span> <span class="s1">'favicon.ico'</span><span class="p">)));</span>
+</code></pre>
+</div>
+
+<p>Designing a comic is not easy, especially since I have almost non-existent graphic design skills, which means that I needed to start from somewhere. The best I could find was <a href="http://cmx.io/" target="_blank">cmx.IO</a>. Combining it with google searching “female hair comics” and GIMP to further edit the strips, I’ve managed to at least start putting my ideas to strips.</p>
+
+<p>I even used XKCD as a starting point for the way it handles comic navigation and even the positioning of navigational controls. I feel guilty but hey, one needs to start somewhere.</p>
+
+<p><a href="https://comic.stefki.com">https://comic.stefki.com</a></p>
+
+<p><img src="/images/icebreaker.jpg" alt="Icebreaker" /></p>
 
   </article>
   <div class="post-tags">
   Tags: 
   
   
-  <a href="/tags/#jekyll">jekyll</a>,
+  <a href="/tags/#web-comics">web-comics</a>,
   
-  <a href="/tags/#wordpress">wordpress</a>,
+  <a href="/tags/#node">node</a>,
   
-  <a href="/tags/#migration">migration</a>
+  <a href="/tags/#express">express</a>
   
 </div>
   
